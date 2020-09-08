@@ -12,7 +12,7 @@ describe("gilded rose", function () {
         it("updated item should be foo", function () {
             const gildedRose = new Store([new Item("foo", 0, 0)]);
             const items = gildedRose.updateQuality();
-            expect(items[0].name).toBe("default");
+            expect(items[0].name).toBe("foo");
         });
     });
 });
