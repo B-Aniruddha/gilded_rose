@@ -1,0 +1,20 @@
+{
+  "name": "gilded-rose",
+  "version": "1.0.0",
+  "description": "Gilded Rose Refactoring",
+  "author": "Royse, Guy",
+  "contributors": [
+    "Bhattacharya, Aniruddha <B.Aniruddha@yahoo.com>"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/B-Aniruddha/gilded_rose.git"
+  },
+  "keywords": [
+    "gilded-rose",
+    "tdd",
+    "es5-to-es6",
+    "refactor"
+  ]
+}
