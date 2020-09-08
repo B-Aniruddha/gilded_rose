@@ -16,5 +16,12 @@
     "tdd",
     "es5-to-es6",
     "refactor"
-  ]
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
 }
