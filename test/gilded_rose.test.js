@@ -7,4 +7,12 @@ describe("gilded rose", function () {
             expect(item.name).toBe("default");
         });
     });
+
+    describe("store creation test", function () {
+        it("updated item should be foo", function () {
+            const gildedRose = new Store([new Item("foo", 0, 0)]);
+            const items = gildedRose.updateQuality();
+            expect(items[0].name).toBe("default");
+        });
+    });
 });
