@@ -30,5 +30,12 @@ describe("gilded rose", function () {
 
             expect(items[0].quality).toBe(7);
         });
+
+        it('should decrease quality for general item by 1', function () {
+            const gildedRose = new Store([new Item('default', 5, 9)]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(9);
+        });
     });
 });
