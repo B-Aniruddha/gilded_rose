@@ -1,4 +1,4 @@
-const { Store, Item } = require("../src/gilded_rose");
+const { Store, Item, Items } = require("../src/gilded_rose");
 
 describe("gilded rose", function () {
     describe("item creation test", function () {
@@ -38,4 +38,16 @@ describe("gilded rose", function () {
             expect(items[0].quality).toBe(8);
         });
     });
+
+
+    describe('+5 Dexterity Vest item', function () {
+
+        it('should decrease quality for item by 1', function () {
+            const gildedRose = new Store([Items[0]]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(18);
+        });
+    });
+
 });
