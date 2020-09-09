@@ -145,7 +145,7 @@ describe("gilded rose", function () {
         const gildedRose = new Store([new Item('Backstage passes to a TAFKAL80ETC concert', 4, 38)]);
         const items = gildedRose.updateQuality();
 
-        expect(items[0].quality).toBe(40);
+        expect(items[0].quality).toBe(41);
     });
 
 });
