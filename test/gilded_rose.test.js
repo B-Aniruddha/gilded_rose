@@ -133,25 +133,32 @@ describe("gilded rose", function () {
             expect(items[0].quality).toBe(50);
         });
 
-        it('should make quality to 0 for anyh item when sellIn = 0 ', function () {
+        it('should make quality to 0 for any item when sellIn = 0 ', function () {
             const gildedRose = new Store([new Item('Backstage passes to a TAFKAL80ETC concert', 0, 40)]);
             const items = gildedRose.updateQuality();
 
             expect(items[0].quality).toBe(0);
         });
 
-        it('should increase quality by 3 when sellIn < 6 ', function () {
+        it('should increase quality by 3 for any item when sellIn < 6 ', function () {
             const gildedRose = new Store([new Item('Backstage passes to a TAFKAL80ETC concert', 4, 38)]);
             const items = gildedRose.updateQuality();
 
             expect(items[0].quality).toBe(41);
         });
 
-        it('should not increase quality by 3 when sellIn < 6 and quality = 48 ', function () {
+        it('should not increase quality by 3 for any item when sellIn < 6 and quality = 48 ', function () {
             const gildedRose = new Store([new Item('Backstage passes to a TAFKAL80ETC concert', 4, 48)]);
             const items = gildedRose.updateQuality();
 
             expect(items[0].quality).not.toBe(51);
+        });
+
+        it('should increase quality by 2 for any item when 6 =< sellIn < 11', function () {
+            const gildedRose = new Store([new Item('Backstage passes to a TAFKAL80ETC concert', 6, 40)]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(43);
         });
     });
 });
