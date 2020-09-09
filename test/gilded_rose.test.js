@@ -72,6 +72,13 @@ describe("gilded rose", function () {
             expect(items[0].quality).toBe(50);
         });
 
+        it('should increase quality for any Aged Brie item when it expires by 2', function () {
+            const gildedRose = new Store([new Item('Aged Brie', -1, 41)]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(42);
+        });
+
     });
 
 });
