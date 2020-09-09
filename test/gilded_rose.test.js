@@ -42,7 +42,7 @@ describe("gilded rose", function () {
 
     describe('+5 Dexterity Vest item', function () {
 
-        it('should decrease quality for item by 1', function () {
+        it('should decrease quality for stored item by 1', function () {
             const gildedRose = new Store([Items[0]]);
             const items = gildedRose.updateQuality();
 
@@ -79,6 +79,16 @@ describe("gilded rose", function () {
             expect(items[0].quality).toBe(43);
         });
 
+    });
+
+    describe('Elixir of the Mongoose item', function () {
+
+        it('should decrease quality for stored item by 1', function () {
+            const gildedRose = new Store([Items[2]]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(5);
+        });
     });
 
 });
