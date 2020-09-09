@@ -39,7 +39,6 @@ describe("gilded rose", function () {
         });
     });
 
-
     describe('+5 Dexterity Vest item', function () {
 
         it('should decrease quality for stored item by 1', function () {
@@ -109,7 +108,6 @@ describe("gilded rose", function () {
         });
     });
 
-
     describe('Backstage passes to a TAFKAL80ETC concert item', function () {
 
         it('should increse quality for stored item by 1', function () {
@@ -159,6 +157,16 @@ describe("gilded rose", function () {
             const items = gildedRose.updateQuality();
 
             expect(items[0].quality).toBe(42);
+        });
+    });
+
+    describe('Conjured Mana Cake item', function () {
+
+        it('should decrease quality for stored item by 1', function () {
+            const gildedRose = new Store([Items[5]]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(4);
         });
     });
 });
