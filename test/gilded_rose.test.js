@@ -91,4 +91,16 @@ describe("gilded rose", function () {
         });
     });
 
+
+    describe('Sulfuras item', function () {
+        it('should not change quality and sellIn for stored item', function () {
+            const gildedRose = new Store([Items[3]]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(81);
+            expect(items[0].sellIn).toBe(0);
+        });
+
+    });
+
 });
