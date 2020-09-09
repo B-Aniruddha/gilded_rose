@@ -21,7 +21,7 @@ describe("gilded rose", function () {
             const gildedRose = new Store([new Item('general', 0, 0)]);
             const items = gildedRose.updateQuality();
 
-            expect(items[0].quality).toBe(1);
+            expect(items[0].quality).toBe(0);
         });
     });
 });
