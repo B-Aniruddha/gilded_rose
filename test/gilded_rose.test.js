@@ -91,8 +91,8 @@ describe("gilded rose", function () {
         });
     });
 
+    describe('Sulfuras, Hand of Ragnaros item', function () {
 
-    describe('Sulfuras item', function () {
         it('should not change quality and sellIn for stored item', function () {
             const gildedRose = new Store([Items[3]]);
             const items = gildedRose.updateQuality();
@@ -106,6 +106,17 @@ describe("gilded rose", function () {
             const items = gildedRose.updateQuality();
 
             expect(items[0].quality).toBe(40);
+        });
+    });
+
+
+    describe('Backstage passes to a TAFKAL80ETC concert item', function () {
+
+        it('should increse quality for stored item by 1', function () {
+            const gildedRose = new Store([Items[4]]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(22);
         });
     });
 
