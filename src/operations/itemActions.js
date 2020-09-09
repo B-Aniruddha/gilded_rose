@@ -1,4 +1,4 @@
-import { MAX_QUALITY, MIN_QUALITY, MIN_SELL } from './gilded_rose';
+import { MAX_QUALITY, MIN_QUALITY, MIN_SELL } from '../gilded_rose';
 
 export const decreaseSellIn = item => (item.sellIn -= 1);
 
