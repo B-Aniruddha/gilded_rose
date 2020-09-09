@@ -97,7 +97,7 @@ describe("gilded rose", function () {
             const gildedRose = new Store([Items[3]]);
             const items = gildedRose.updateQuality();
 
-            expect(items[0].quality).toBe(81);
+            expect(items[0].quality).toBe(80);
             expect(items[0].sellIn).toBe(0);
         });
 
