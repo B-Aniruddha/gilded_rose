@@ -69,7 +69,7 @@ describe("gilded rose", function () {
             const gildedRose = new Store([new Item('Aged Brie', -1, 50)]);
             const items = gildedRose.updateQuality();
 
-            expect(items[0].quality).toBe(51);
+            expect(items[0].quality).toBe(50);
         });
 
     });
