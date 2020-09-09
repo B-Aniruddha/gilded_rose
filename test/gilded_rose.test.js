@@ -101,6 +101,12 @@ describe("gilded rose", function () {
             expect(items[0].sellIn).toBe(0);
         });
 
+        it('should not change quality for any item when sellIn < 0', function () {
+            const gildedRose = new Store([new Item('Sulfuras, Hand of Ragnaros', -1, 40)]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(42);
+        });
     });
 
 });
