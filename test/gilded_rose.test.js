@@ -65,6 +65,13 @@ describe("gilded rose", function () {
             expect(items[0].quality).toBe(50);
         });
 
+        it('should never increase quality for any Aged Brie item over 50 and sellIn < 0', function () {
+            const gildedRose = new Store([new Item('Aged Brie', -1, 50)]);
+            const items = gildedRose.updateQuality();
+
+            expect(items[0].quality).toBe(51);
+        });
+
     });
 
 });
