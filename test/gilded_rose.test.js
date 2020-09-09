@@ -126,4 +126,13 @@ describe("gilded rose", function () {
 
         expect(items[0].quality).toBe(49);
     });
+
+    it('should not increase quality by 2 for any item when sellIn < 6 and quality = 49 ', function () {
+        const gildedRose = new Store([new Item('Backstage passes to a TAFKAL80ETC concert', 4, 49)]);
+        const items = gildedRose.updateQuality();
+
+        expect(items[0].quality).toBe(51);
+    });
+
+
 });
